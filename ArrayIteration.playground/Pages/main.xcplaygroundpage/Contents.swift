@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+let cart : [String] = ["chips", "salsa", "guacamole", "red wine"]
 
 
 
@@ -25,9 +25,13 @@
  */
 // write your code here
 
+var list : [Int] = []
+var i = 1;
 
-
-
+while i <= 10 {
+    list.append(i)
+    i += 1
+}
 
 
 
@@ -36,9 +40,9 @@
  */
 // write your code here
 
-
-
-
+for integer in list {
+    print(integer)
+}
 
 
 
@@ -47,9 +51,11 @@
  */
 // write your code here
 
+for cartItems in cart {
+    print("hey: \(cartItems)")
+}
 
-
-
+print(cart)
 
 
 
@@ -63,15 +69,21 @@
 
 
 
-
 /*: question6
  ### 4. Create a function that takes an array of names and greets each person with the following message "Good morning x" <- x being the individuals name. One caveat. If the persons first name is Michael, we want to greet them with the message, "Top of the morning Michael!".
  */
 // write your code here
 
-
-
-
+func morningGreeting(individuals : [String]) -> Void {
+    for individual in individuals {
+        if individual == "Michael" {
+            print("Top of the morning \(individual)")
+        }
+        else {
+            print("Good morning \(individual)")
+        }
+    }
+}
 
 
 /*: question7
@@ -79,7 +91,17 @@
  */
 // write your code here
 
-
+func intsLessThan50(integerArray : [Int]) -> [Int] {
+    
+    var intsLessThan50 : [Int] = []
+    
+    for integer in integerArray {
+        if integer < 50 {
+            intsLessThan50.append(integer)
+        }
+    }
+    return intsLessThan50
+}
 
 
 
